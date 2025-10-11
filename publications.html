@@ -50,32 +50,91 @@
         <a href="teaching.html">Teaching</a>
     </nav>
     <main>
-        <h2>Publications</h2>
-        <ul>
-            <li>
-                <a href="https://www.epw.in/journal/2024/48/general-elections-2024/does-congress-partys-performance-2024-general.html" target="_blank">
-                    Pratikshit, P., & Verma, R. (2024). Does Congress Party’s performance in 2024 general election signal a revival? 
-                    <em>Economic and Political Weekly</em>.
-                </a>
-            </li>
-            <li>
-                <a href="https://theprint.in/opinion/who-takes-better-care-of-political-workers-survey-of-bjp-and-congress-finds-out/1998769/" target="_blank">
-                    Pratikshit, P., & Verma, R. (2024). Who takes better care of political workers? 
-                    <em>The Print</em>.
-                </a>
-            </li>
-        </ul>
+      <h2>Publications</h2>
+<ul>
+    <li>
+        <a href="https://www.epw.in/journal/2024/48/general-elections-2024/does-congress-partys-performance-2024-general.html" target="_blank">
+            Pratikshit, P., & Verma, R. (2024). Does Congress Party’s performance in 2024 general election signal a revival? 
+            <em>Economic and Political Weekly</em>.
+        </a>
+        <button class="abstract-btn" onclick="toggleAbstract('abs1')">Read abstract ▾</button>
+        <p id="abs1" class="abstract" style="display: none;">
+            [The exuberance among the Congress party’s supporters has much to do with the baseline expectation, which had plummeted after the Bharatiya Janata Party’s thumping victory in December 2023 assembly elections in Madhya Pradesh, Chhattisgarh, and Rajasthan. Despite an increase in seat count and vote share, the party continues to face significant structural challenges such as a very narrow social base. A detailed analysis of constituency-level data indicates that the party continues to lag behind in a head-to-head contest against the BJP , and its improved performance is largely in states where the party was a junior partner in the alliance.]
+        </p>
+    </li>
+
+    <li>
+        <a href="https://theprint.in/opinion/who-takes-better-care-of-political-workers-survey-of-bjp-and-congress-finds-out/1998769/" target="_blank">
+            Pratikshit, P., & Verma, R. (2024). Who takes better care of political workers? 
+            <em>The Print</em>.
+        </a>
+        <button class="abstract-btn" onclick="toggleAbstract('abs2')">Read abstract ▾</button>
+        <p id="abs2" class="abstract" style="display: none;">
+            [Abstract placeholder: Insert the short summary or key insight from this article.]
+        </p>
+    </li>
+</ul>
+
 <h2>Working Paper(s)</h2>
 <ul>
     <li>
-        Pratikshit, P., & Verma, R. (Upcoming). Do Incumbents and Opposition Strategize Mobilization Differently?
+        Pratikshit, P., & Verma, R. (Upcoming). <strong>Do Incumbents and Opposition Strategize Mobilization Differently?</strong>  
         A Multi-Method Analysis of Political Rallies in India.  
         <em>(Presented at the Delhi Political Communication Workshop)</em>
+        <br>
+        <button class="abstract-btn" onclick="toggleAbstract('abs3')">Read abstract ▾</button>
+        <p id="abs3" class="abstract" style="display: none;">
+            [Abstract placeholder: Describe theoretical question, data sources, and main contribution.]
+        </p>
     </li>
+
     <li>
-        Pratikshit, P. (upcoming).The Myth of Discipline — A Behavioral Analysis of the BJP’s Changing Organization
+        Pratikshit, P. (Upcoming). <strong>The Myth of Discipline — A Behavioral Analysis of the BJP’s Changing Organization.</strong>
+        <br>
+        <button class="abstract-btn" onclick="toggleAbstract('abs4')">Read abstract ▾</button>
+        <p id="abs4" class="abstract" style="display: none;">
+            [Abstract placeholder: Summarize main argument and methodological focus here.]
+        </p>
     </li>
 </ul>
+
+<script>
+function toggleAbstract(id) {
+    const abs = document.getElementById(id);
+    const btn = abs.previousElementSibling;
+    if (abs.style.display === "none") {
+        abs.style.display = "block";
+        btn.textContent = "Hide abstract ▲";
+    } else {
+        abs.style.display = "none";
+        btn.textContent = "Read abstract ▾";
+    }
+}
+</script>
+
+<style>
+.abstract-btn {
+    background-color: transparent;
+    border: none;
+    color: #0066cc;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.abstract-btn:hover {
+    text-decoration: underline;
+}
+
+.abstract {
+    margin-top: 10px;
+    padding-left: 15px;
+    font-size: 0.95em;
+    color: #333;
+    border-left: 2px solid #ddd;
+}
+</style>
     </main>
     <footer>
         <p>&copy; 2024 Pawas Pratikshit</p>
