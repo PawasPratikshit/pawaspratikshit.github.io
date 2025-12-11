@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIr R Package – Pawas Pratikshit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="header-link">Pawas Pratikshit</a>
+</header>
+
+<nav>
+    <a href="index.html">About</a>
+    <a href="cv.html">CV</a>
+    <a href="publications.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+<div class="container">
+
+    <h1>SPIr: Segment Pivotality Index for Hierarchical Electoral Data</h1>
+
+    <p>
+        <strong>SPIr</strong> is an R package designed to compute and analyse the 
+        <em>Segment Pivotality Index (SPI)</em>, a diagnostic tool for hierarchical 
+        electoral systems such as Assembly Constituencies nested within Parliamentary 
+        Constituencies. SPI quantifies how pivotal each sub-unit is to the final 
+        election outcome using only meso-level data.
+    </p>
+
+    <p>
+        Although created for the Indian electoral context, <strong>SPIr is fully generalisable</strong> 
+        to any hierarchical dataset (e.g., branches within firms, districts within regions).
+    </p>
+
+    <hr>
+
+    <h2>Installation</h2>
+    <p>Install the development version from GitHub:</p>
+
+    <pre><code>install.packages("remotes")
+remotes::install_github("PawasPratikshit/SPIr")
+library(SPIr)
+</code></pre>
+
+    <hr>
+
+    <h2>Documentation & Help</h2>
+    <p>
+        On some systems, package-level help may not open via <code>?SPIr</code>.
+        The reliable way to browse the full documentation is:
+    </p>
+
+    <pre><code>help(package = "SPIr")</code></pre>
+
+    <p>Function-specific help works normally:</p>
+
+    <pre><code>?compute_spi
+?add_spi
+?summary_spi
+?plot_spi_distribution
+</code></pre>
+
+    <hr>
+
+    <h2>Core Functions</h2>
+    <ul>
+        <li><code>compute_spi()</code> – Compute SPI at the segment level</li>
+        <li><code>add_spi()</code> – Merge SPI values into your dataset</li>
+        <li><code>summary_spi()</code> – Summarise SPI patterns</li>
+        <li><code>plot_spi_distribution()</code> – Visualise SPI values</li>
+        <li><code>spi_help()</code> – Quick workflow guide</li>
+    </ul>
+
+    <hr>
+
+    <h2>Example</h2>
+
+    <pre><code>library(SPIr)
+library(dplyr)
+
+df <- tibble(
+  pc    = c(1,1,1,1),
+  ac    = c(1,1,2,2),
+  cand  = c("A","B","A","B"),
+  votes = c(60,40,55,45)
+)
+
+spi_df <- compute_spi(
+  df,
+  pc_id     = pc,
+  ac_id     = ac,
+  candidate = cand,
+  votes     = votes
+)
+
+spi_df
+</code></pre>
+
+    <hr>
+
+    <h2>Recommended Workflow</h2>
+    <pre><code>help(package = "SPIr")
+spi_help()
+
+spi_df  <- compute_spi(...)
+full_df <- add_spi(...)
+summary_spi(spi_df)
+plot_spi_distribution(spi_df)
+</code></pre>
+
+    <hr>
+
+    <h2>Citation</h2>
+    <p>If you use <strong>SPIr</strong> in your research, please cite:</p>
+
+    <p><em>Pratikshit, Pawas. (2025). SPIr: Tools for Computing the Segment Pivotality Index.</em></p>
+
+    <hr>
+
+    <h2>Contributing</h2>
+    <p>
+        Issues, feature requests, and pull requests are welcome at:<br>
+        <a href="https://github.com/PawasPratikshit/SPIr/issues" target="_blank">
+            https://github.com/PawasPratikshit/SPIr/issues
+        </a>
+    </p>
+
+</div>
+</main>
+
+<footer>
+    <p>&copy; 2025 Pawas Pratikshit</p>
+</footer>
+
+</body>
+</html>
