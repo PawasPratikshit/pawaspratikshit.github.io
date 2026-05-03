@@ -71,7 +71,7 @@ main {
 
 /* Image wrapper */
 .about-img-wrapper {
-    flex: 0 0 260px;          /* FIXED width instead of flexible */
+    flex: 0 0 auto;   /* let image define size */
 }
 
 /* About Me Image */
