@@ -76,10 +76,8 @@ main {
 
 /* About Me Image */
 .about-img {
-    height: 420px;          /* FORCE height */
-    width: auto;            /* let width adjust */
-    max-width: 100%;        /* prevent overflow */
-    object-fit: cover;
+    width: 240px;        /* control size HERE */
+    height: auto;        /* keep natural proportions */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
