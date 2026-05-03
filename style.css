@@ -71,9 +71,9 @@ main {
 
 /* About Me Image */
 .about-img {
-    width: 100%;
-    height: auto;
-    max-height: 420px;     /* ADD THIS */
+    height: 420px;          /* FORCE height */
+    width: auto;            /* let width adjust */
+    max-width: 100%;        /* prevent overflow */
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
