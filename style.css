@@ -57,9 +57,9 @@ main {
 /* About Me Container */
 .about-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;   /* align top of image and text */
-    max-width: 900px;
+    justify-content: flex-start;   /* CHANGE from center */
+    align-items: flex-start;
+    max-width: 750px;              /* tighter academic width */
     margin: 0 auto;
     gap: 40px;
 }
